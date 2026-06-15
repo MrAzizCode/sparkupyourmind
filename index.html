@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkUpYourMind | Creative Burnout Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SparkUpYourMind home">
+      <span class="brand-mark">S</span>
+      <span>SparkUpYourMind</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <button class="cart-pill" type="button" data-cart-open>
+        Cart <span data-cart-count>0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=85" alt="">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Creativity with room to breathe</p>
+        <h1>SparkUpYourMind</h1>
+        <p>
+          A simple support space for creatives learning how to prevent, manage, and recover
+          from creative burnout.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="products.html">View Products</a>
+          <a class="button button-secondary" href="#burnout">Learn About Burnout</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="burnout">
+      <div class="section-heading">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Creative work needs energy, not constant pressure.</h2>
+      </div>
+      <div class="intro-grid">
+        <article>
+          <h3>What is creativity?</h3>
+          <p>
+            Creativity is the ability to connect ideas, solve problems, express feelings, and
+            make something meaningful. It can show up in design, writing, art, music, business,
+            content creation, and everyday decisions.
+          </p>
+        </article>
+        <article>
+          <h3>What is creative burnout?</h3>
+          <p>
+            Creative burnout happens when mental, emotional, or physical exhaustion makes it
+            difficult to think clearly, feel inspired, or keep producing work. It can come from
+            deadlines, perfectionism, comparison, overworking, or lack of rest.
+          </p>
+        </article>
+        <article>
+          <h3>How we help</h3>
+          <p>
+            SparkUpYourMind shares clear information and offers simple products such as journals,
+            reflection cards, and recovery kits that help creatives slow down, reset, and rebuild
+            healthier creative habits.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section support-band">
+      <div>
+        <p class="eyebrow">For students, artists, designers, and makers</p>
+        <h2>Small tools for better creative routines.</h2>
+      </div>
+      <div class="support-list">
+        <div>
+          <span>01</span>
+          <p>Recognize burnout signs before they become overwhelming.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <p>Use guided products to plan rest, reflection, and idea recovery.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <p>Build creative habits that support both productivity and wellbeing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview-products">
+      <div class="section-heading">
+        <p class="eyebrow">Featured products</p>
+        <h2>Start with a simple reset.</h2>
+      </div>
+      <div class="featured-products" data-featured-products></div>
+      <a class="button button-primary center-button" href="products.html">Browse All Products</a>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button type="button" class="icon-button" data-cart-close aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong data-cart-total>$0.00</strong>
+        </div>
+        <button class="button button-primary full-width" type="button" data-checkout>Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
