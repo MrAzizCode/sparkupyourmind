@@ -25,33 +25,6 @@ const products = [
     price: 19.99,
     image: "assets/products/product-3.jpg",
     featured: true
-  },
-  {
-    id: "idea-map",
-    name: "Idea Map Workbook",
-    description: "A workbook for organizing scattered ideas into themes, projects, and next steps.",
-    details: "Great for students and creators who have many ideas but feel too overwhelmed to choose where to begin.",
-    price: 12.99,
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85",
-    featured: false
-  },
-  {
-    id: "rest-planner",
-    name: "Creative Rest Planner",
-    description: "A weekly planner that balances creative work, study time, sleep, breaks, and personal routines.",
-    details: "This planner helps prevent burnout by making rest visible and treating recovery as part of the creative process.",
-    price: 11.99,
-    image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=900&q=85",
-    featured: false
-  },
-  {
-    id: "focus-playlist",
-    name: "Focus Playlist Guide",
-    description: "A digital guide for building sound routines for focus, brainstorming, deep work, and rest.",
-    details: "Includes sample playlist moods and reflection prompts to help you understand which sounds support your creativity.",
-    price: 6.99,
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85",
-    featured: false
   }
 ];
 
