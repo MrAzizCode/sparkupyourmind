@@ -694,8 +694,16 @@ h3 {
 
 .creative-mind {
   display: grid;
-  place-items: end center;
-  padding: 38px clamp(20px, 5vw, 72px) 0 0;
+  place-items: center;
+  padding: 34px clamp(20px, 5vw, 72px) 24px 0;
+}
+
+.mind-reference {
+  position: relative;
+  z-index: 1;
+  width: min(535px, 100%);
+  height: auto;
+  filter: drop-shadow(10px 12px 0 rgba(32, 47, 80, 0.12));
 }
 
 .mind-sketch {
@@ -875,15 +883,15 @@ h3 {
 }
 
 .scribble-one {
-  top: 26px;
-  right: 92px;
+  top: 72px;
+  right: clamp(28px, 8vw, 120px);
   width: 86px;
   height: 54px;
   transform: rotate(18deg);
 }
 
 .scribble-two {
-  left: 86px;
+  left: clamp(28px, 8vw, 110px);
   bottom: 150px;
   width: 110px;
   height: 36px;
@@ -898,13 +906,13 @@ h3 {
 }
 
 .burst-one {
-  top: 18px;
-  right: 232px;
+  top: 96px;
+  right: clamp(180px, 24vw, 320px);
 }
 
 .burst-two {
-  right: 60px;
-  top: 302px;
+  right: clamp(26px, 8vw, 90px);
+  top: 360px;
 }
 
 .section-scribble,
@@ -1015,6 +1023,10 @@ h3 {
     transform-origin: center top;
   }
 
+  .mind-reference {
+    width: min(440px, 100%);
+  }
+
   .header-doodles,
   .site-header::after {
     display: none;
@@ -1051,6 +1063,10 @@ h3 {
     width: min(470px, 100%);
     height: 390px;
     transform: scale(0.7);
+  }
+
+  .mind-reference {
+    width: min(345px, 96%);
   }
 
   .head-shape {
