@@ -6,7 +6,7 @@
   <title>SparkUpYourMind | Creative Burnout Support</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +15,11 @@
       <span class="brand-mark">S</span>
       <span>SparkUpYourMind</span>
     </a>
+    <div class="header-doodles" aria-hidden="true">
+      <span class="doodle-loop"></span>
+      <span class="doodle-star">+</span>
+      <span class="doodle-note">idea?</span>
+    </div>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span></span>
@@ -33,12 +38,37 @@
 
   <main>
     <section class="hero">
-      <div class="hero-media" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=85" alt="">
+      <div class="hero-media creative-mind" aria-hidden="true">
+        <div class="mind-sketch">
+          <div class="head-shape">
+            <span class="eye eye-left"></span>
+            <span class="eye eye-right"></span>
+            <span class="nose-line"></span>
+          </div>
+          <div class="brain-cloud">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <svg class="thought-lines" viewBox="0 0 520 380" role="img" aria-label="">
+            <path d="M145 300 C180 235, 176 170, 232 116" />
+            <path d="M214 312 C246 230, 250 172, 270 92" />
+            <path d="M300 315 C285 238, 313 178, 344 116" />
+            <path d="M88 110 C118 84, 141 105, 128 132 C118 155, 84 153, 76 128" />
+            <path d="M390 72 C430 56, 464 76, 466 112 C470 151, 432 176, 392 157" />
+            <path d="M118 52 C148 18, 195 35, 200 76" />
+            <path d="M327 48 C354 24, 405 32, 414 72" />
+          </svg>
+          <span class="floating-word word-one">rest</span>
+          <span class="floating-word word-two">spark</span>
+          <span class="floating-word word-three">pause</span>
+          <span class="scribble scribble-one"></span>
+          <span class="scribble scribble-two"></span>
+          <span class="burst burst-one">✦</span>
+          <span class="burst burst-two">+</span>
+        </div>
       </div>
       <div class="hero-content">
         <p class="eyebrow">Creativity with room to breathe</p>
-        <h1>SparkUpYourMind</h1>
+        <h1><span>SparkUp</span><span>YourMind</span></h1>
         <p>
           A simple support space for creatives learning how to prevent, manage, and recover
           from creative burnout.
@@ -51,6 +81,7 @@
     </section>
 
     <section class="section intro-section" id="burnout">
+      <span class="section-scribble" aria-hidden="true"></span>
       <div class="section-heading">
         <p class="eyebrow">Why it matters</p>
         <h2>Creative work needs energy, not constant pressure.</h2>
@@ -84,6 +115,7 @@
     </section>
 
     <section class="section support-band">
+      <span class="corner-doodle" aria-hidden="true">burnout ≠ laziness</span>
       <div>
         <p class="eyebrow">For students, artists, designers, and makers</p>
         <h2>Small tools for better creative routines.</h2>
@@ -105,6 +137,7 @@
     </section>
 
     <section class="section preview-products">
+      <span class="loose-line" aria-hidden="true"></span>
       <div class="section-heading">
         <p class="eyebrow">Featured products</p>
         <h2>Start with a simple reset.</h2>
