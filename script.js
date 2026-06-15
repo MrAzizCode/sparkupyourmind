@@ -2,28 +2,28 @@ const products = [
   {
     id: "reset-journal",
     name: "Creative Reset Journal",
-    description: "A guided journal with reflection prompts, weekly mood checks, and gentle planning pages for burned-out creatives.",
-    details: "Use this journal to notice burnout patterns, organize your ideas, and create realistic creative goals without pressure.",
+    description: "A gentle journal for creatives who need space to rest, reflect, and begin again.",
+    details: "Use this guided journal to slow down, notice burnout patterns, and rebuild your creative routine one calm page at a time.",
     price: 14.99,
-    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=85",
+    image: "assets/products/product-1.jpg",
     featured: true
   },
   {
     id: "spark-cards",
     name: "Spark Prompt Cards",
-    description: "A set of idea cards for quick exercises, low-pressure sketching, writing starts, and creative warmups.",
-    details: "Each card gives one small creative action. The goal is to restart momentum through play instead of forcing perfection.",
+    description: "A 50-card prompt deck for creative warmups, sketching exercises, and writing starts.",
+    details: "Each card gives one small low-pressure creative prompt, helping you restart momentum through play instead of perfection.",
     price: 9.99,
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
+    image: "assets/products/product-2.jpg",
     featured: true
   },
   {
     id: "calm-kit",
     name: "Burnout Calm Kit",
-    description: "A recovery bundle with printable planners, rest checklists, and creative energy tracking sheets.",
-    details: "The kit is designed for days when your mind feels overloaded and you need a simple structure to recover.",
+    description: "A recovery bundle with planners, rest checklists, and creative energy tracking sheets.",
+    details: "Designed for overwhelming days, this kit helps you recover, reset, recharge, and remember that rest is not laziness.",
     price: 19.99,
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85",
+    image: "assets/products/product-3.jpg",
     featured: true
   },
   {
