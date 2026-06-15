@@ -716,31 +716,37 @@ h3 {
   stroke-width: 5;
   stroke-linecap: round;
   opacity: 0.62;
+  animation: doodleFloat 7s ease-in-out infinite;
 }
 
 .thought-path {
   stroke-dasharray: 10 18;
+  animation: thoughtFlow 3.8s linear infinite;
 }
 
 .thought-path.main {
   stroke-dasharray: 0;
   opacity: 0.55;
+  animation: thoughtPulse 4.6s ease-in-out infinite;
 }
 
 .orbit {
   stroke-width: 4;
   stroke-dasharray: 9 16;
   opacity: 0.5;
+  animation: orbitFlow 5.5s linear infinite;
 }
 
 .orbit-two {
   opacity: 0.38;
+  animation-duration: 7s;
 }
 
 .small-spark {
   stroke-width: 4;
   stroke-dasharray: 0;
   opacity: 0.52;
+  animation: thoughtPulse 3.4s ease-in-out infinite;
 }
 
 .mind-sketch {
@@ -927,6 +933,7 @@ h3 {
   height: 42px;
   opacity: 0.68;
   transform: rotate(9deg);
+  animation: scribbleWiggle 4.4s ease-in-out infinite;
 }
 
 .scribble-two {
@@ -936,6 +943,7 @@ h3 {
   height: 32px;
   opacity: 0.58;
   transform: rotate(-7deg);
+  animation: scribbleWiggleAlt 5.2s ease-in-out infinite;
 }
 
 .burst {
@@ -950,12 +958,102 @@ h3 {
   top: 128px;
   right: clamp(190px, 27vw, 340px);
   opacity: 0.82;
+  animation: burstBlink 2.8s ease-in-out infinite;
 }
 
 .burst-two {
   right: clamp(56px, 10vw, 110px);
   top: 392px;
   opacity: 0.64;
+  animation: burstBlink 3.4s ease-in-out infinite 0.4s;
+}
+
+@keyframes thoughtFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -56;
+  }
+}
+
+@keyframes orbitFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes thoughtPulse {
+  0%,
+  100% {
+    opacity: 0.42;
+  }
+
+  50% {
+    opacity: 0.72;
+  }
+}
+
+@keyframes doodleFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes scribbleWiggle {
+  0%,
+  100% {
+    transform: rotate(9deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(14deg) translate(4px, -5px);
+  }
+}
+
+@keyframes scribbleWiggleAlt {
+  0%,
+  100% {
+    transform: rotate(-7deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(-12deg) translate(-5px, -3px);
+  }
+}
+
+@keyframes burstBlink {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(0.92) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08) rotate(10deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-doodle-field,
+  .thought-path,
+  .orbit,
+  .small-spark,
+  .scribble,
+  .burst {
+    animation-duration: 10s;
+  }
 }
 
 .section-scribble,
