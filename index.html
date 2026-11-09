@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
   <meta name="description" content="A softer place to start again: creative reset exercises, journals, prompts, and tools.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="studio.css">
+  <link rel="icon" href="assets/spark-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="studio.css?v=field-notes-2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="SparkUpYourMind home">
-      <span class="brand-mark">S</span>
-      <span>SparkUpYourMind</span>
+      <img class="spark-mark" src="assets/spark-mark.svg" width="42" height="42" alt="">
+      <span class="spark-wordmark">SparkUp<i>YourMind</i></span>
     </a>
     <div class="header-doodles" aria-hidden="true">
       <span class="doodle-loop"></span>
@@ -57,10 +58,12 @@
         <span class="scribble scribble-two"></span>
         <span class="burst burst-one">✦</span>
         <span class="burst burst-two">+</span>
+        <span class="sketch-caption">Fig. 01 / ideas in bloom</span>
+        <span class="sketch-sticker">Made of<br>little starts.</span>
       </div>
       <div class="hero-content">
         <p class="eyebrow hero-stamp">Field notes / 01</p>
-        <h1>Make room <em>to make.</em></h1>
+        <h1><span class="title-line"><span>Make room</span></span> <em class="title-line"><span>to make.</span></em></h1>
         <p>
           Tools and tiny rituals for the days when making things feels harder than it should.
         </p>
@@ -68,10 +71,18 @@
           <a class="button button-primary" href="products.html">Explore the collection</a>
           <a class="button button-secondary" href="#reset">Try a creative reset</a>
         </div>
+        <button type="button" class="motion-control" data-motion-toggle hidden>Play motion</button>
       </div>
     </section>
 
-    <div class="studio-strip" aria-label="Studio reminders"><span>Make a mess</span><span>Rest is part of it</span><span>Start anywhere</span><span>Keep it small</span></div>
+    <div class="studio-strip">
+      <div class="strip-window">
+        <div class="strip-track">
+          <div class="strip-copy"><span>Make a mess</span><span>Rest is part of it</span><span>Start anywhere</span><span>Keep it small</span></div>
+          <div class="strip-copy" aria-hidden="true"><span>Make a mess</span><span>Rest is part of it</span><span>Start anywhere</span><span>Keep it small</span></div>
+        </div>
+      </div>
+    </div>
 
     <section class="section intro-section" id="burnout">
       <span class="section-scribble" aria-hidden="true"></span>
@@ -169,6 +180,6 @@
   </dialog>
 
   <footer class="site-footer"><strong>SparkUpYourMind</strong><span>A softer place to start again.</span><a href="products.html">Browse the collection</a></footer>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=field-notes-2" defer></script>
 </body>
 </html>

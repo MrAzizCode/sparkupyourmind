@@ -271,6 +271,28 @@ renderFeaturedProducts();
 renderProducts();
 renderCart();
 
+const motionToggle = document.querySelector("[data-motion-toggle]");
+if (motionToggle) {
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  let enabled = !reducedMotion.matches;
+  const updateMotion = () => {
+    document.body.classList.toggle("motion-paused", !enabled);
+    document.body.classList.toggle("motion-opt-in", enabled && reducedMotion.matches);
+    motionToggle.textContent = enabled ? "Pause motion" : "Play motion";
+  };
+  document.body.classList.add("motion-ready");
+  updateMotion();
+  motionToggle.hidden = false;
+  motionToggle.addEventListener("click", () => {
+    enabled = !enabled;
+    updateMotion();
+  });
+  reducedMotion.addEventListener("change", event => {
+    enabled = !event.matches;
+    updateMotion();
+  });
+}
+
 const prompts = {
   stuck: ["Draw one object without lifting your pen. Let the result be messy.", "Write three deliberately bad titles. Keep the one that makes you smile.", "Pick a color and find three ways to describe it without naming it."],
   tired: ["Close the draft. Write one sentence about where you want to pick it up tomorrow.", "Look away from your screen and notice one color, one sound, and one texture.", "Give yourself permission to stop after one line. Write that line."],
