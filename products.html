@@ -6,10 +6,13 @@
   <title>Products | SparkUpYourMind</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="A softer place to start again: creative reset exercises, journals, prompts, and tools.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="studio.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="SparkUpYourMind home">
       <span class="brand-mark">S</span>
@@ -21,7 +24,7 @@
       <span class="doodle-note">idea?</span>
     </div>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
       <span></span>
       <span></span>
       <span></span>
@@ -30,21 +33,21 @@
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
+      <a href="index.html#reset">Reset studio</a>
       <button class="cart-pill" type="button" data-cart-open>
         Cart <span data-cart-count>0</span>
       </button>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-title shop-title">
       <span class="page-doodle page-doodle-one" aria-hidden="true"></span>
       <span class="page-doodle page-doodle-two" aria-hidden="true">make / rest / repeat</span>
-      <p class="eyebrow">Shop support tools</p>
-      <h1>Products for creative burnout recovery</h1>
+      <p class="eyebrow">The collection / 03 tools</p>
+      <h1>Tools for the in-between.</h1>
       <p>
-        Browse simple, student-friendly wellness products designed for creatives who want
-        structure, calm, and fresh ideas.
+        A journal, a deck of prompts, and a reset kit. Pick what feels useful today.
       </p>
     </section>
 
@@ -64,18 +67,19 @@
       </label>
     </section>
 
-    <section class="products-grid" data-products-grid aria-live="polite"></section>
+    <p class="results-count" data-results-count role="status"></p>
+    <section class="products-grid" data-products-grid></section>
   </main>
 
-  <dialog class="product-dialog" data-product-dialog>
+  <dialog class="product-dialog" data-product-dialog aria-labelledby="product-title">
     <button type="button" class="icon-button dialog-close" data-dialog-close aria-label="Close product details">x</button>
     <div class="dialog-content" data-dialog-content></div>
   </dialog>
 
-  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+  <dialog class="cart-drawer" data-cart-drawer aria-labelledby="cart-title">
     <div class="cart-panel">
       <div class="cart-header">
-        <h2>Your Cart</h2>
+        <h2 id="cart-title">Your cart</h2>
         <button type="button" class="icon-button" data-cart-close aria-label="Close cart">x</button>
       </div>
       <div class="cart-items" data-cart-items></div>
@@ -84,11 +88,13 @@
           <span>Total</span>
           <strong data-cart-total>$0.00</strong>
         </div>
-        <button class="button button-primary full-width" type="button" data-checkout>Checkout</button>
+        <button class="button button-primary full-width" type="button" data-checkout>Preview checkout</button>
+        <p role="status" data-checkout-status>This is a demo store. No payment is collected.</p>
       </div>
     </div>
-  </aside>
+  </dialog>
 
-  <script src="script.js"></script>
+  <footer class="site-footer"><strong>SparkUpYourMind</strong><span>A softer place to start again.</span><a href="products.html">Browse the collection</a></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

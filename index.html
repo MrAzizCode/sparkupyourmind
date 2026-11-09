@@ -6,10 +6,13 @@
   <title>SparkUpYourMind | Creative Burnout Support</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="A softer place to start again: creative reset exercises, journals, prompts, and tools.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="studio.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="SparkUpYourMind home">
       <span class="brand-mark">S</span>
@@ -21,7 +24,7 @@
       <span class="doodle-note">idea?</span>
     </div>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
       <span></span>
       <span></span>
       <span></span>
@@ -30,13 +33,14 @@
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
+      <a href="index.html#reset">Reset studio</a>
       <button class="cart-pill" type="button" data-cart-open>
         Cart <span data-cart-count>0</span>
       </button>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero-media creative-mind" aria-hidden="true">
         <svg class="hero-doodle-field" viewBox="0 0 680 680" aria-hidden="true">
@@ -55,18 +59,19 @@
         <span class="burst burst-two">+</span>
       </div>
       <div class="hero-content">
-        <p class="eyebrow">Creativity with room to breathe</p>
-        <h1><span>SparkUp</span><span>YourMind</span></h1>
+        <p class="eyebrow hero-stamp">Field notes / 01</p>
+        <h1>Make room <em>to make.</em></h1>
         <p>
-          A simple support space for creatives learning how to prevent, manage, and recover
-          from creative burnout.
+          Tools and tiny rituals for the days when making things feels harder than it should.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="products.html">View Products</a>
-          <a class="button button-secondary" href="#burnout">Learn About Burnout</a>
+          <a class="button button-primary" href="products.html">Explore the collection</a>
+          <a class="button button-secondary" href="#reset">Try a creative reset</a>
         </div>
       </div>
     </section>
+
+    <div class="studio-strip" aria-label="Studio reminders"><span>Make a mess</span><span>Rest is part of it</span><span>Start anywhere</span><span>Keep it small</span></div>
 
     <section class="section intro-section" id="burnout">
       <span class="section-scribble" aria-hidden="true"></span>
@@ -124,6 +129,11 @@
       </div>
     </section>
 
+    <section class="section reset-studio" id="reset" aria-labelledby="reset-title">
+      <div><p class="eyebrow">The reset studio / 01</p><h2 id="reset-title">Start smaller.</h2><p>Pick a feeling. Take one tiny creative step. No streaks, scores, or sign-in.</p></div>
+      <div class="reset-note"><label for="reset-mode">What would help today?</label><select id="reset-mode"><option value="stuck">I feel stuck</option><option value="tired">I feel drained</option><option value="scattered">I feel scattered</option></select><p id="reset-prompt" aria-live="polite"></p><button type="button" class="button button-secondary" data-next-prompt>Try another prompt</button></div>
+    </section>
+
     <section class="section preview-products">
       <span class="loose-line" aria-hidden="true"></span>
       <div class="section-heading">
@@ -135,10 +145,15 @@
     </section>
   </main>
 
-  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+  <dialog class="product-dialog" data-product-dialog aria-labelledby="product-title">
+    <button type="button" class="icon-button dialog-close" data-dialog-close aria-label="Close product details">x</button>
+    <div class="dialog-content" data-dialog-content></div>
+  </dialog>
+
+  <dialog class="cart-drawer" data-cart-drawer aria-labelledby="cart-title">
     <div class="cart-panel">
       <div class="cart-header">
-        <h2>Your Cart</h2>
+        <h2 id="cart-title">Your cart</h2>
         <button type="button" class="icon-button" data-cart-close aria-label="Close cart">x</button>
       </div>
       <div class="cart-items" data-cart-items></div>
@@ -147,11 +162,13 @@
           <span>Total</span>
           <strong data-cart-total>$0.00</strong>
         </div>
-        <button class="button button-primary full-width" type="button" data-checkout>Checkout</button>
+        <button class="button button-primary full-width" type="button" data-checkout>Preview checkout</button>
+        <p role="status" data-checkout-status>This is a demo store. No payment is collected.</p>
       </div>
     </div>
-  </aside>
+  </dialog>
 
-  <script src="script.js"></script>
+  <footer class="site-footer"><strong>SparkUpYourMind</strong><span>A softer place to start again.</span><a href="products.html">Browse the collection</a></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
